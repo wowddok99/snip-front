@@ -9,9 +9,9 @@ type HeaderProps = {
 
 export default function Header({ onToggleMenu }: HeaderProps) {
     return (
-        <header>
+        <header className={"sticky top-0 z-20 bg-white/80 backdrop-blur-lg border-b-[0.7px]"}>
             <nav className="flex container max-w-5xl mx-auto justify-between items-center px-6 py-3">
-                <div className="flex items-center gap-1 z-10 cursor-pointer">
+                <div className="flex items-center gap-1 cursor-pointer">
                     <FaConnectdevelop className="text-[27px] animate-[spin_7s_linear_infinite]" />
                     <div className="text-2xl font-bold">Devit</div>
                 </div>
@@ -31,7 +31,7 @@ export default function Header({ onToggleMenu }: HeaderProps) {
                 </div>
                 <RxHamburgerMenu
                     onClick={onToggleMenu}
-                    className="md:hidden text-[20px] cursor-pointer z-10"
+                    className="md:hidden text-[20px] cursor-pointer"
                 />
             </nav>
         </header>
