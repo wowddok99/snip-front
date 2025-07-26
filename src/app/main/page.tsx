@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react";
-import Header from "@/component/layout/Header";
-import MobileMenu from "@/component/layout/MobileMenu";
+import Header from "@/components/layout/Header";
+import MobileMenu from "@/components/layout/MobileMenu";
 
 export default function Home() {
     const [menuOpen, setMenuOpen] = useState(false)
