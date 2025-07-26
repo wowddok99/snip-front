@@ -1,0 +1,39 @@
+"use client";
+
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FaConnectdevelop } from "react-icons/fa";
+
+type HeaderProps = {
+    onToggleMenu: () => void;
+};
+
+export default function Header({ onToggleMenu }: HeaderProps) {
+    return (
+        <header>
+            <nav className="flex container max-w-5xl mx-auto justify-between items-center px-6 py-3">
+                <div className="flex items-center gap-1 z-10 cursor-pointer">
+                    <FaConnectdevelop className="text-[27px] animate-[spin_7s_linear_infinite]" />
+                    <div className="text-2xl font-bold">Devit</div>
+                </div>
+                <div className="hidden md:flex gap-7 items-center">
+                    <div className="flex gap-3 items-center">
+                        <div className="cursor-pointer">프리랜서 찾기</div>
+                        <div className="cursor-pointer">프로젝트 찾기</div>
+                        <div className="w-[0.7px] h-5 bg-gray-300 mx-2" />
+                        <div className="cursor-pointer">프리랜서 등록</div>
+                        <div className="cursor-pointer">프로젝트 등록</div>
+                    </div>
+                    <div className="flex gap-2">
+                        <div className="flex items-center justify-center bg-black text-[14px] text-white font-bold py-1.5 px-4 rounded-full cursor-pointer">
+                            로그인
+                        </div>
+                    </div>
+                </div>
+                <RxHamburgerMenu
+                    onClick={onToggleMenu}
+                    className="md:hidden text-[20px] cursor-pointer z-10"
+                />
+            </nav>
+        </header>
+    );
+}
