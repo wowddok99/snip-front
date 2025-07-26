@@ -1,6 +1,13 @@
+"use client"
+
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaConnectdevelop } from "react-icons/fa";
+import { useState } from "react";
 export default function Home() {
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    const toggleMenu = () => setMenuOpen(prev => !prev);
+
     return (
         <body className={"bg-white"}>
             <header className={""}>
@@ -21,12 +28,18 @@ export default function Home() {
                             <div className={"flex items-center justify-center bg-black text-[14px] text-white font-bold py-1.5 px-4 rounded-full"}>로그인</div>
                         </div>
                     </div>
-                    <RxHamburgerMenu className={"md:hidden text-[20px] cursor-pointer z-10"}/>
+                    <RxHamburgerMenu onClick={toggleMenu} className={"md:hidden text-[20px] cursor-pointer z-10"}/>
                 </nav>
             </header>
 
             {/* Menu Side Bar(Mobile) */}
-            <aside className={"block md:hidden fixed right-0 inset-y-0 w-full bg-white shadow-lg"}>
+            <aside className={`
+                transition-transform duration-[350ms] ease-in-out 
+                ${menuOpen ? 'translate-x-0' : 'translate-x-full '} 
+                md:hidden fixed right-0 inset-y-0 w-full 
+                bg-white shadow-lg`
+                }
+            >
                 <nav className={"flex flex-col gap-3.5 px-[25px] py-[68px]"}>
                     <div className={"cursor-pointer"}>프리랜서 찾기</div>
                     <div className={"cursor-pointer"}>프로젝트 찾기</div>
