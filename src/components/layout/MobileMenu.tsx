@@ -21,7 +21,7 @@ export default function MobileMenu({ isOpen }: MobileMenuProps) {
                 <hr className="my-3 border-t border-gray-200" />
                 <div className="cursor-pointer">홈</div>
                 <hr className="my-3 border-t border-gray-200" />
-                <div className="text-gray-500 cursor-pointer">회원가입/로그인</div>
+                <div className="cursor-pointer">회원가입/로그인</div>
             </nav>
         </aside>
     );
