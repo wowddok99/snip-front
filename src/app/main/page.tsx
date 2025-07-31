@@ -3,65 +3,78 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import MobileMenu from "@/components/layout/MobileMenu";
+import ProjectCard from "@/components/ui/ProjectCard";
+import { FiChevronRight } from "react-icons/fi";
 
 export default function Home() {
+    const projects = [
+        {
+            dueDate: "~08/25(월)",
+            title: "[중급] 삼성 그룹 그룹웨어 개발",
+            tags: ["개발", "Spring", "JPA", "Oracle"],
+            location: "서울",
+            level: "중급",
+            duration: "12개월",
+            cost: "800만원",
+            likes: 0,
+        },
+        {
+            dueDate: "~08/30(금)",
+            title: "[초급] 쇼핑몰 프론트엔드 유지보수",
+            tags: ["프론트엔드", "React", "JavaScript", "Figma"],
+            location: "경기",
+            level: "초급",
+            duration: "6개월",
+            cost: "500만원",
+            likes: 3,
+        },
+        {
+            dueDate: "~09/10(화)",
+            title: "[고급] 공공기관 백엔드 시스템 고도화",
+            tags: ["백엔드", "Spring Boot", "MySQL", "Linux"],
+            location: "대전",
+            level: "고급",
+            duration: "10개월",
+            cost: "950만원",
+            likes: 5,
+        },
+        {
+            dueDate: "~09/01(일)",
+            title: "[중급] 병원 예약 시스템 리뉴얼",
+            tags: ["Next.js", "TypeScript", "Tailwind", "UX"],
+            location: "부산",
+            level: "중급",
+            duration: "8개월",
+            cost: "750만원",
+            likes: 2,
+        },
+    ];
+
     const [menuOpen, setMenuOpen] = useState(false)
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
     return (
-        <div className={""}>
+        <div className={"bg-[#f9f9f9] min-h-screen"}>
             <Header onToggleMenu={toggleMenu}></Header>
             <MobileMenu isOpen={menuOpen} />
             <main className={"flex flex-col max-w-5xl mx-auto px-6 py-12"}>
-                {/* 서비스 소개 섹션 */}
-                <section className={"flex flex-col gap-[50px] md:gap-[70px]"}>
-                    <div className={"flex flex-col md:flex-row justify-center items-center gap-10"}>
-                        <div className={"flex flex-col gap-1.5 md:gap-2.5 items-center text-center"}>
-                            <h1>
-                                <div className={"text-[20px] md:text-[30px] font-bold"}>
-                                    IT 전문가와 기업을<br/>
-                                    가장 빠르게 연결하는 플랫폼
-                                </div>
-                            </h1>
-                            <p className={"text-[14px] md:text-[16px] font-normal text-gray-600"}>
-                                Devit은 현업 중심의 데이터와 검증된 인재를 기반으로<br/>
-                                기업과 프리랜서 간 최적의 매칭을 실현하는 스마트 매칭 플랫폼입니다.
-                            </p>
-                        </div>
-                        <div className={"flex flex-col gap-2 justify-center items-center px-5 py-8 rounded-2xl border-[1px]"}>
-                            <div className={"text-gray-600 text-center"}>원하는 서비스를 쉽고<br className={"md:hidden"}/> 간편하게 찾을 수 있어요!</div>
-                            <div className={"flex flex-col items-center justify-center gap-1"}>
-                                <div className={"flex justify-center gap-1"}>
-                                    <div className={"px-4 rounded-lg border-[1px] py-2 font-semibold tracking-tight cursor-pointer"}>
-                                        프로젝트 둘러보기
-                                    </div>
-                                    <div className={"px-4 rounded-lg border-[1px] py-2 font-semibold tracking-tight cursor-pointer"}>
-                                        이용 방법
-                                    </div>
-                                </div>
-                                <div className={"px-11 rounded-lg border-[1px] py-2 font-semibold tracking-tight cursor-pointer"}>
-                                    기업용 맞춤 상담받기
-                                </div>
-                            </div>
-                        </div>
+                <section className={"flex flex-col gap-3 bg-white border p-7 rounded-2xl shadow-md"}>
+                    <div className={"flex tracking-tight"}>
+                        <div className={"text-blue-500"}>135개</div>
+                        <div className={""}>의 프로젝트가 열려있습니다.</div>
                     </div>
-                    <div className={"grid grid-cols-2 md:grid-cols-4 gap-4"}>
-                        <div className={"flex flex-col gap-2 justify-center items-center md:border-r"}>
-                            <div className={"text-2xl md:text-3xl font-bold"}>50명+</div>
-                            <div className={"text-m text-gray-600"}>알파테스터 참여자</div>
-                        </div>
-                        <div className={"flex flex-col gap-2 justify-center items-center md:border-r"}>
-                            <div className={"text-2xl md:text-3xl font-bold"}>100건+</div>
-                            <div className={"text-m text-gray-600"}>피드백 수집</div>
-                        </div>
-                        <div className={"flex flex-col gap-2 justify-center items-center md:border-r"}>
-                            <div className={"text-2xl md:text-3xl font-bold"}>2024년 4분기</div>
-                            <div className={"text-m text-gray-600"}>서비스 출시 예정</div>
-                        </div>
-                        <div className={"flex flex-col gap-2 justify-center items-center md:border-none"}>
-                            <div className={"text-2xl md:text-3xl font-bold"}>120시간+</div>
-                            <div className={"text-m text-gray-600"}>누적 개발 시간</div>
+                    <div className={"grid grid-cols-1 gap-3"}>
+                        {projects.map((project, idx) => (
+                            <ProjectCard key={idx} {...project} />
+                        ))}
+                    </div>
+                    <div className="w-full border-t border-gray-200 mt-4">
+                        <div className="flex justify-center items-center mt-6 gap-2 cursor-pointer">
+                            <span className="text-sm font-semibold text-gray-700">더보기</span>
+                            <button className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center">
+                                <FiChevronRight size={14} className="text-gray-500" />
+                            </button>
                         </div>
                     </div>
                 </section>

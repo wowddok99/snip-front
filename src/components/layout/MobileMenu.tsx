@@ -12,16 +12,16 @@ export default function MobileMenu({ isOpen }: MobileMenuProps) {
                 bg-white shadow-lg z-10`
             }
         >
-            <nav className="flex flex-col gap-3.5 px-[25px] py-[68px]">
-                <div className="cursor-pointer">프리랜서 찾기</div>
-                <div className="cursor-pointer">프로젝트 찾기</div>
+            <nav className="flex flex-col mt-[14px] gap-[14px] px-[25px] py-[68px] text-gray-600 font-extralight">
+                <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</div>
+                <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</div>
                 <hr className="my-3 border-t border-gray-200" />
-                <div className="cursor-pointer">프리랜서 등록</div>
-                <div className="cursor-pointer">프로젝트 등록</div>
+                <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 등록</div>
+                <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</div>
                 <hr className="my-3 border-t border-gray-200" />
-                <div className="cursor-pointer">홈</div>
+                <div className="cursor-pointer hover:text-black hover:font-light">홈</div>
                 <hr className="my-3 border-t border-gray-200" />
-                <div className="cursor-pointer">회원가입/로그인</div>
+                <div className="cursor-pointer hover:text-black hover:font-light">회원가입/로그인</div>
             </nav>
         </aside>
     );
