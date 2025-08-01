@@ -12,9 +12,9 @@ export default function Header({ onToggleMenu }: HeaderProps) {
         <header className={"sticky top-0 z-20 bg-white/80 backdrop-blur-lg border-b-[0.7px]"}>
             <nav className="flex container max-w-5xl mx-auto justify-between items-center px-6 py-3">
                 <div className="flex items-center gap-1 cursor-pointer">
-                    <div className="text-2xl font-bold tracking-tighter">snip</div>
+                    <Link href="/main" className="text-2xl font-bold tracking-tighter">snip</Link>
                 </div>
-                <div className="hidden md:flex gap-7 items-center font-extralight">
+                <div className="hidden md:flex gap-7 items-center font-light">
                     <div className="flex gap-5 items-center text-gray-600">
                         <Link href="/partner" className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</Link>
                         <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</div>
@@ -22,8 +22,8 @@ export default function Header({ onToggleMenu }: HeaderProps) {
                         <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</div>
                     </div>
                     <div className="flex gap-2">
-                        <div className="flex items-center justify-center bg-black text-[14px] text-white font-bold py-1.5 px-4 rounded-full cursor-pointer">
-                            로그인
+                        <div className="flex items-center justify-center bg-black border border-transparent text-[14px] text-white font-bold py-1.5 px-4 rounded-[4px] cursor-pointer hover:bg-white hover:border-black hover:text-gray-700">
+                        로그인
                         </div>
                     </div>
                 </div>

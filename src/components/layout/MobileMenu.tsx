@@ -9,7 +9,7 @@ export default function MobileMenu({ isOpen }: MobileMenuProps) {
                 `transition-transform duration-[350ms] ease-in-out
                 ${isOpen ? "translate-x-0" : "translate-x-full"}
                 md:hidden fixed right-0 inset-y-0 w-full
-                bg-white shadow-lg z-10`
+                bg-white shadow-lg z-20`
             }
         >
             <nav className="flex flex-col mt-[14px] gap-[14px] px-[25px] py-[68px] text-gray-600 font-extralight">
