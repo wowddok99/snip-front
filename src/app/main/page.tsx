@@ -55,10 +55,10 @@ export default function Home() {
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
     return (
-        <div className={"bg-[#f9f9f9] min-h-screen"}>
+        <div>
             <Header onToggleMenu={toggleMenu}></Header>
             <MobileMenu isOpen={menuOpen} />
-            <main className={"flex flex-col max-w-5xl mx-auto px-6 py-12"}>
+            <main className={"flex flex-col max-w-5xl mx-auto px-6 py-8"}>
                 <section className={"flex flex-col gap-3 bg-white border p-7 rounded-2xl shadow-md"}>
                     <div className={"flex tracking-tight"}>
                         <div className={"text-blue-500"}>135개</div>

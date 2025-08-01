@@ -1,7 +1,7 @@
 "use client";
 
 import { RxHamburgerMenu } from "react-icons/rx";
-import { FaConnectdevelop } from "react-icons/fa";
+import Link from "next/link";
 
 type HeaderProps = {
     onToggleMenu: () => void;
@@ -16,7 +16,7 @@ export default function Header({ onToggleMenu }: HeaderProps) {
                 </div>
                 <div className="hidden md:flex gap-7 items-center font-extralight">
                     <div className="flex gap-5 items-center text-gray-600">
-                        <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</div>
+                        <Link href="/partner" className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</Link>
                         <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</div>
                         <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 등록</div>
                         <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</div>
