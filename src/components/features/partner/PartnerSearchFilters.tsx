@@ -9,12 +9,12 @@ export default function PartnerSearchFilters() {
             <div>
                 <h2 className="text-3xl font-medium mb-2 tracking-tighter">프리랜서 찾기</h2>
             </div>
-            <div className="flex gap-2 w-full text-[15px]">
+            <div className="grid grid-cols-2 md:flex md:flex-row gap-2 w-full text-[15px]">
                 <div className="
-                    flex items-center gap-2 bg-white py-[7px] rounded-lg
+                    flex flex-1 items-center gap-2 bg-white py-[7px] rounded-lg
                     border-[2px] border-gray-300 hover:border-gray-800
                     transition-colors duration-200
-                    flex-1
+                    col-span-2
                 ">
                     <IoSearchOutline className="ml-[10px] text-gray-500" />
                     <input
