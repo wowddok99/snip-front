@@ -4,18 +4,21 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 
 export default function PartnerSearchFilters() {
+
     return (
         <div className="flex flex-col gap-[10px] justify-center items-start">
+
             <div>
                 <h2 className="text-3xl font-medium mb-2 tracking-tighter">프리랜서 찾기</h2>
             </div>
+
             <div className="grid grid-cols-2 md:flex md:flex-row gap-2 w-full text-[15px]">
                 <div className="
                     flex flex-1 items-center gap-2 bg-white py-[7px] rounded-lg
                     border-[2px] border-gray-300 hover:border-gray-800
                     transition-colors duration-200
-                    col-span-2
-                ">
+                    col-span-2"
+                >
                     <IoSearchOutline className="ml-[10px] text-gray-500" />
                     <input
                         type="text"
@@ -44,7 +47,9 @@ export default function PartnerSearchFilters() {
                     <IoMdArrowDropdown />
                 </div>
             </div>
+
             <div className="w-full h-[1px] bg-gray-200 mt-3" />
+
         </div>
     );
 }

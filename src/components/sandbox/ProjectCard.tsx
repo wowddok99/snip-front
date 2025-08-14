@@ -1,7 +1,7 @@
 import React from "react";
 import { CiHeart } from "react-icons/ci";
 
-interface ProjectCard {
+interface ProjectCardProps {
     dueDate: string;
     title: string;
     tags: string[];
@@ -21,9 +21,11 @@ export default function ProjectCard({
     duration,
     cost,
     likes,
-}: ProjectCard) {
+}: ProjectCardProps) {
+
     return (
         <div className="flex flex-col gap-2 border px-6 py-7 rounded-xl hover:border-blue-400 transition-colors duration-300 cursor-pointer">
+
             {/* 마감 날짜 */}
             <div className="flex items-center justify-between">
                 <div className="px-[7px] py-[4px] rounded-lg border-none bg-[#297be6] text-white text-[12px] tracking-normal">
@@ -74,6 +76,7 @@ export default function ProjectCard({
                     <div className="font-bold text-[13px]">{cost}</div>
                 </div>
             </div>
+
         </div>
     );
 }

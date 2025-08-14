@@ -13,7 +13,7 @@ import {
 import MainHeader from "@/components/layout/MainHeader";
 import MainMobileMenu from "@/components/layout/MainMobileMenu";
 import MainFooter from "@/components/layout/MainFooter";
-import MainContactForm from "@/components/features/MainContactForm";
+import MainContactForm from "@/components/features/main/MainContactForm";
 
 export default function Home() {
     const [menuOpen, setMenuOpen] = useState(false);

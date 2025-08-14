@@ -3,17 +3,22 @@
 import Header from "@/components/layout/Header";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useState } from "react";
-import PartnerSearchFilters from "@/components/features/PartnerSearchFilters";
-import PartnerProfileCard, { PartnerProfileProps } from "@/components/features/PartnerProfileCard";
+import PartnerSearchFilters from "@/components/features/partner/list/PartnerSearchFilters";
+import PartnerProfileCard, { PartnerProfileCardData } from "@/components/features/partner/list/PartnerProfileCard";
+import Link from "next/link";
 
 export default function Home() {
+    const [menuOpen, setMenuOpen] = useState(false)
 
-    // 표시할 파트너 데이터 정의(임시)
-    const partnerData: PartnerProfileProps = {
+    const toggleMenu = () => setMenuOpen(prev => !prev);
+
+    const partnerData: PartnerProfileCardData = {
         name: "전**",
         imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-        type: "개인",
-        availability: "상주, 원격 모두 가능",
+        desiredConditions: {
+            type: "개인",
+            availability: "원격/상주 가능"
+        },
         experienceYears: 10,
         jobTitle: "백엔드 개발자",
         projectCount: 5,
@@ -26,18 +31,16 @@ export default function Home() {
         skills: ['Java', 'Spring Boot', 'Python', 'Django', 'Node.js', 'MySQL', 'PostgreSQL'],
     };
 
-    const [menuOpen, setMenuOpen] = useState(false)
-
-    const toggleMenu = () => setMenuOpen(prev => !prev);
     return (
         <div>
             {/* 헤더(Header) */}
             <Header onToggleMenu={toggleMenu}></Header>
-            <MobileMenu isOpen={menuOpen} />
+            <MobileMenu isOpen={menuOpen} onToggleMenu={toggleMenu}/>
 
             <main className={"flex flex-col max-w-5xl mx-auto px-6 py-10"}>
-                <PartnerSearchFilters />
-                <PartnerProfileCard {...partnerData} />
+                <Link href="/partner/detail">
+                    <PartnerProfileCard data={partnerData} />
+                </Link>
             </main>
         </div>
     );

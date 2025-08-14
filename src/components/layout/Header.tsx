@@ -8,6 +8,7 @@ type HeaderProps = {
 };
 
 export default function Header({ onToggleMenu }: HeaderProps) {
+
     return (
         <header className={"sticky top-0 z-20 bg-white/80 backdrop-blur-lg border-b-[0.7px]"}>
             <nav className="flex container max-w-5xl mx-auto justify-between items-center px-6 py-3">
@@ -16,7 +17,7 @@ export default function Header({ onToggleMenu }: HeaderProps) {
                 </div>
                 <div className="hidden md:flex gap-7 items-center font-light">
                     <div className="flex gap-5 items-center text-gray-600">
-                        <Link href="/partner" className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</Link>
+                        <Link href="/partner/list" className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</Link>
                         <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</div>
                         <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 등록</div>
                         <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</div>

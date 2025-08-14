@@ -7,6 +7,7 @@ export default function MainContactForm() {
     };
 
     return (
+
         <div className="max-w-xl w-full mx-auto mt-4">
             <div className="flex flex-col gap-4 text-left">
                 <div>

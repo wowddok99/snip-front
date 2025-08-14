@@ -6,6 +6,7 @@ type MainMobileMenuProps = {
 };
 
 export default function MainMobileMenu({ isOpen, onToggleMenu }: MainMobileMenuProps) {
+
     return (
         <aside
             className={
@@ -21,7 +22,6 @@ export default function MainMobileMenu({ isOpen, onToggleMenu }: MainMobileMenuP
                     className="text-gray-300 text-[28px] cursor-pointer"
                 />
             </div>
-
             <nav className="flex flex-col mt-[14px] gap-[14px] px-[25px] py-[68px] text-gray-300 font-light">
                 <div className="cursor-pointer hover:text-white hover:font-light">프리랜서 찾기</div>
                 <div className="cursor-pointer hover:text-white hover:font-light">프로젝트 찾기</div>

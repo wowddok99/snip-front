@@ -1,8 +1,12 @@
+import { RxCross2 } from "react-icons/rx";
+
 type MobileMenuProps = {
     isOpen: boolean;
+    onToggleMenu: () => void;
 };
 
-export default function MobileMenu({ isOpen }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onToggleMenu }: MobileMenuProps) {
+
     return (
         <aside
             className={
@@ -12,6 +16,12 @@ export default function MobileMenu({ isOpen }: MobileMenuProps) {
                 bg-white shadow-lg z-20`
             }
         >
+            <div className="absolute top-3 right-6">
+                <RxCross2
+                    onClick={onToggleMenu}
+                    className="text-gray-300 text-[28px] cursor-pointer"
+                />
+            </div>
             <nav className="flex flex-col mt-[14px] gap-[14px] px-[25px] py-[68px] text-gray-600 font-extralight">
                 <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</div>
                 <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</div>
