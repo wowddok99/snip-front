@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useState } from "react";
 import PartnerProposalCard from "@/components/features/partner/detail/PartnerProposalCard";
-import PartnerProfileCard from "@/components/features/partner/detail/PartnerProfileCard";
+import PartnerDetailCard from "@/components/features/partner/detail/PartnerDetailCard";
 
 const partnerDetailData = {
     name: "전**",
@@ -75,7 +75,7 @@ export default function Home() {
             <main className={"mx-auto max-w-5xl px-6 py-10"}>
                 <div className="flex flex-col gap-8 md:flex-row">
                     {/* 좌측 컨텐츠 영역 */}
-                    <PartnerProfileCard {...partnerDetailData} />
+                    <PartnerDetailCard {...partnerDetailData} />
 
                     {/* 우측 콘텐츠 영역 */}
                     <PartnerProposalCard />

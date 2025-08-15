@@ -3,8 +3,7 @@
 import Header from "@/components/layout/Header";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useState } from "react";
-import PartnerSearchFilters from "@/components/features/partner/list/PartnerSearchFilters";
-import PartnerProfileCard, { PartnerProfileCardData } from "@/components/features/partner/list/PartnerProfileCard";
+import PartnerSummaryCard from "@/components/features/partner/list/PartnerSummaryCard";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,11 +11,11 @@ export default function Home() {
 
     const toggleMenu = () => setMenuOpen(prev => !prev);
 
-    const partnerData: PartnerProfileCardData = {
+    const partnerData = {
         name: "전**",
         imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
         desiredConditions: {
-            type: "개인",
+            type: "개인" as "개인" | "팀",
             availability: "원격/상주 가능"
         },
         experienceYears: 10,
@@ -39,7 +38,7 @@ export default function Home() {
 
             <main className={"flex flex-col max-w-5xl mx-auto px-6 py-10"}>
                 <Link href="/partner/detail">
-                    <PartnerProfileCard data={partnerData} />
+                    <PartnerSummaryCard {...partnerData} />
                 </Link>
             </main>
         </div>

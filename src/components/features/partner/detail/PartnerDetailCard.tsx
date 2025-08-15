@@ -1,20 +1,8 @@
+"use client";
+
 import { MdOutlineFileDownload } from "react-icons/md";
 
-interface ResumeFile {
-    name: string;
-    url: string;
-}
-
-interface Project {
-    id: number;
-    company: string;
-    role: string;
-    title: string;
-    period: string;
-    description: string;
-}
-
-interface PartnerProfileCardProps {
+interface PartnerDetailCardProps {
     name: string;
     imageUrl: string;
     jobTitle: string;
@@ -23,31 +11,45 @@ interface PartnerProfileCardProps {
     desiredConditions: {
         type: string;
         availability: string;
+        location?: string;
+        period?: string;
+        rate?: string;
     };
     headline: string;
     introduction: string;
     skills: string[];
     links: {
         github: string;
+        notion?: string;
     };
-    resumeFiles: ResumeFile[];
-    projects: Project[];
+    resumeFiles: {
+        name: string;
+        url: string;
+    }[];
+    projects: {
+        id: number;
+        company: string;
+        role: string;
+        title: string;
+        period: string;
+        description: string;
+    }[];
 }
 
-export default function PartnerProfileCard({
+export default function PartnerDetailCard({
     name,
     imageUrl,
     jobTitle,
     experienceYears,
     projectCount,
-    desiredConditions,
+    desiredConditions: { type, availability },
     headline,
     introduction,
     skills,
-    links,
+    links: { github },
     resumeFiles,
     projects,
-}: PartnerProfileCardProps) {
+}: PartnerDetailCardProps) {
 
     return (
         <div className="flex w-full flex-col gap-10 rounded-lg border bg-white p-6 md:w-2/3">
@@ -64,10 +66,10 @@ export default function PartnerProfileCard({
                         <h1 className="text-2xl font-bold text-gray-800">{name}</h1>
                         <div className="flex items-center gap-1">
                             <span className="rounded-md bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-600">
-                                {desiredConditions.type}
+                                {type}
                             </span>
                             <span className="rounded-md bg-teal-50 px-3 py-1 text-sm font-semibold text-teal-700">
-                                {desiredConditions.availability}
+                                {availability}
                             </span>
                         </div>
                     </div>
@@ -161,11 +163,11 @@ export default function PartnerProfileCard({
                 <h3 className="mb-4 border-b pb-2 text-xl font-bold">링크</h3>
                 <div className="flex flex-col gap-3 text-sm">
                     <a
-                        href={links.github}
+                        href={github}
                         target="_blank"
                         className="text-blue-600 hover:underline"
                     >
-                        {links.github}
+                        {github}
                     </a>
                 </div>
             </section>
