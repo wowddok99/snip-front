@@ -18,7 +18,7 @@ export default function ProjectSummaryCard({
     duration
 }: ProjectSummaryCardProps) {
     return (
-        <div className="flex flex-col gap-4 cursor-pointer rounded-lg border bg-white p-6 shadow-sm transition hover:shadow-md">
+        <div className="flex flex-col gap-4 cursor-pointer rounded-lg border bg-white p-6 shadow-sm transition duration-500 hover:shadow-md">
 
             {/* 제목 */}
             <h2 className="leading-snug text-lg font-semibold">{title}</h2>

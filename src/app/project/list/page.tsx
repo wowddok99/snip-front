@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useState } from "react";
 import ProjectSummaryCard from "@/components/features/project/list/ProjectSummaryCard";
+import Link from "next/link";
 
 export default function ProjectListPage() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +49,9 @@ export default function ProjectListPage() {
 
                 {/* 프로젝트 카드 리스트 */}
                 {projects.map((project, idx) => (
-                    <ProjectSummaryCard key={idx} {...project} />
+                    <Link href="/project/detail">
+                        <ProjectSummaryCard key={idx} {...project} />
+                    </Link>
                 ))}
             </main>
         </div>
