@@ -3,7 +3,7 @@
 import Header from "@/components/layout/Header";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useState } from "react";
-import { FiUpload, FiPaperclip } from "react-icons/fi"; // 아이콘 import
+import { FiUpload, FiPaperclip } from "react-icons/fi";
 
 export default function PartnerNewPage() {
     const [menuOpen, setMenuOpen] = useState(false);
