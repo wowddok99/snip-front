@@ -34,15 +34,15 @@ export default function PartnerNewPage() {
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">이름</label>
-                            <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">직무</label>
-                            <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">경력 (년차)</label>
-                            <input type="number" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="number" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">프로필 이미지</label>
@@ -63,7 +63,7 @@ export default function PartnerNewPage() {
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">근무 형태</label>
-                            <select className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
+                            <select className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 <option>상주</option>
                                 <option>원격</option>
                                 <option>협의</option>
@@ -71,15 +71,15 @@ export default function PartnerNewPage() {
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">희망 단가</label>
-                            <input type="text" placeholder="예: 500만원/월" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="text" placeholder="예: 500만원/월" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">위치</label>
-                            <input type="text" placeholder="예: 서울" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="text" placeholder="예: 서울" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">가능 기간</label>
-                            <input type="date" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="date" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                     </div>
 
@@ -87,29 +87,29 @@ export default function PartnerNewPage() {
                     <div className="flex flex-col gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">한 줄 소개</label>
-                            <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">상세 소개</label>
-                            <textarea rows={4} className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <textarea rows={4} className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                     </div>
 
                     {/* 보유 기술 */}
                     <div>
                         <label className="block text-sm font-medium text-gray-700 pb-1">보유 기술</label>
-                        <input type="text" placeholder="예: Spring, React, AWS" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                        <input type="text" placeholder="예: Spring, React, AWS" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
 
                     {/* 외부 링크 */}
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">GitHub</label>
-                            <input type="url" placeholder="https://github.com/username" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="url" placeholder="https://github.com/username" className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">Notion</label>
-                            <input type="url" placeholder="https://notion.so/..." className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
+                            <input type="url" placeholder="https://notion.so/..." className="w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                     </div>
 
