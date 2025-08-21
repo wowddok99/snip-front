@@ -20,7 +20,7 @@ export default function Header({ onToggleMenu }: HeaderProps) {
                         <Link href="/partner/list" className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</Link>
                         <Link href="/project/list" className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</Link>
                         <Link href="/partner/new" className="cursor-pointer hover:text-black hover:font-light">프리랜서 등록</Link>
-                        <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</div>
+                        <Link href="/project/new" className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</Link>
                     </div>
                     <div className="flex gap-2">
                         <div className="flex items-center justify-center bg-black border border-transparent text-[14px] text-white font-bold py-1.5 px-4 rounded-[4px] cursor-pointer hover:bg-white hover:border-black hover:text-gray-700">
