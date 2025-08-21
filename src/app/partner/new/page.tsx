@@ -19,6 +19,7 @@ export default function PartnerNewPage() {
             <MobileMenu isOpen={menuOpen} onToggleMenu={toggleMenu} />
 
             <main className="flex flex-col max-w-5xl mx-auto px-6 py-10 gap-6">
+
                 {/* 페이지 타이틀 */}
                 <div>
                     <h1 className="text-2xl font-bold text-slate-800">파트너 등록</h1>
@@ -28,9 +29,9 @@ export default function PartnerNewPage() {
                 </div>
 
                 {/* 폼 영역 */}
-                <form className="flex flex-col gap-8 bg-white rounded-lg shadow-sm p-6 md:p-8">
+                <form className="flex flex-col gap-6 bg-white rounded-lg shadow-sm p-8">
                     {/* 기본 정보 */}
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">이름</label>
                             <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
@@ -59,7 +60,7 @@ export default function PartnerNewPage() {
                     </div>
 
                     {/* 희망 조건 */}
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">근무 형태</label>
                             <select className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500">
@@ -83,7 +84,7 @@ export default function PartnerNewPage() {
                     </div>
 
                     {/* 자기소개 */}
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">한 줄 소개</label>
                             <input type="text" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
@@ -94,7 +95,6 @@ export default function PartnerNewPage() {
                         </div>
                     </div>
 
-
                     {/* 보유 기술 */}
                     <div>
                         <label className="block text-sm font-medium text-gray-700 pb-1">보유 기술</label>
@@ -102,7 +102,7 @@ export default function PartnerNewPage() {
                     </div>
 
                     {/* 외부 링크 */}
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 pb-1">GitHub</label>
                             <input type="url" placeholder="https://github.com/username" className="w-full rounded-md border px-3 py-2 text-sm focus:ring-blue-500 focus:border-blue-500" />
@@ -137,7 +137,6 @@ export default function PartnerNewPage() {
                                 ))}
                             </div>
                         </div>
-
                     </div>
 
                     {/* 제출 버튼 */}
@@ -149,6 +148,7 @@ export default function PartnerNewPage() {
                         </button>
                     </div>
                 </form>
+
             </main>
         </div>
     );
