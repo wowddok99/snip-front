@@ -23,9 +23,9 @@ export default function MainHeader({ onToggleMenu }: MainHeaderProps) {
                         <Link href="/project/new" className="cursor-pointer hover:text-white">프로젝트 등록</Link>
                     </div>
                     <div className="flex gap-2">
-                        <div className="flex items-center justify-center bg-none border-gray-400 border-[0.5px] text-[14px] text-white font-bold py-1.5 px-4 rounded-[4px] cursor-pointer hover:bg-white hover:text-gray-700">
+                        <Link href="/login" className="flex items-center justify-center bg-none border-gray-400 border-[0.5px] text-[14px] text-white font-bold py-1.5 px-4 rounded-[4px] cursor-pointer hover:bg-white hover:text-gray-700">
                             로그인
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <RxHamburgerMenu

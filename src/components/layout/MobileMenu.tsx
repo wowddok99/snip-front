@@ -1,4 +1,5 @@
 import { RxCross2 } from "react-icons/rx";
+import Link from "next/link";
 
 type MobileMenuProps = {
     isOpen: boolean;
@@ -23,15 +24,15 @@ export default function MobileMenu({ isOpen, onToggleMenu }: MobileMenuProps) {
                 />
             </div>
             <nav className="flex flex-col mt-[14px] gap-[14px] px-[25px] py-[68px] text-gray-600 font-extralight">
-                <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</div>
-                <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</div>
+                <Link href="/partner/list" className="cursor-pointer hover:text-black hover:font-light">프리랜서 찾기</Link>
+                <Link href="/project/list" className="cursor-pointer hover:text-black hover:font-light">프로젝트 찾기</Link>
                 <hr className="my-3 border-t border-gray-200" />
-                <div className="cursor-pointer hover:text-black hover:font-light">프리랜서 등록</div>
-                <div className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</div>
+                <Link href="/partner/new" className="cursor-pointer hover:text-black hover:font-light">프리랜서 등록</Link>
+                <Link href="/project/new" className="cursor-pointer hover:text-black hover:font-light">프로젝트 등록</Link>
                 <hr className="my-3 border-t border-gray-200" />
-                <div className="cursor-pointer hover:text-black hover:font-light">홈</div>
+                <Link href="/main" className="cursor-pointer hover:text-black hover:font-light">홈</Link>
                 <hr className="my-3 border-t border-gray-200" />
-                <div className="cursor-pointer hover:text-black hover:font-light">회원가입/로그인</div>
+                <Link href="/login" className="cursor-pointer hover:text-black hover:font-light">회원가입/로그인</Link>
             </nav>
         </aside>
     );
